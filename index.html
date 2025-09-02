@@ -6,112 +6,27 @@
 <title>情報I クイズ（明瞭UIカード風）</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-body {
-  font-family: 'Noto Sans JP', 'Segoe UI', 'Roboto', sans-serif;
-  background: linear-gradient(to bottom, #eaf2f8, #fff);
-  margin: 0;
-  padding: 20px;
-}
-h1 {
-  text-align: center;
-  color: #222;
-  margin-bottom: 20px;
-  font-weight: 700;
-}
-.quiz-box {
-  max-width: 520px;
-  margin: 0 auto;
-  background: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  padding: 25px;
-  transition: transform 0.2s;
-}
-.quiz-box:hover {
-  transform: translateY(-2px);
-}
-#question {
-  font-size: 20px;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 20px;
-}
-.choice {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: #f0f4ff;
-  border: none;
-  border-radius: 12px;
-  padding: 15px;
-  margin: 10px 0;
-  width: 100%;
-  font-size: 17px;
-  font-weight: 500;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-.choice:hover {
-  background: #dbe3ff;
-  transform: translateY(-2px);
-}
-.choice img {
-  max-width: 80%;
-  margin-top: 8px;
-  border-radius: 8px;
-}
-.choice.correct::after {
-  content: "✔";
-  color: #16a34a;
-  font-size: 22px;
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.choice.incorrect::after {
-  content: "✖";
-  color: #dc2626;
-  font-size: 22px;
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-#result {
-  margin-top: 18px;
-  font-weight: 600;
-  font-size: 16px;
-  min-height: 22px;
-}
-#progress, #score {
-  margin-top: 12px;
-  font-size: 14px;
-  color: #555;
-}
-button#nextBtn, button#restartBtn {
-  margin-top: 18px;
-  padding: 12px 24px;
-  font-size: 17px;
-  border-radius: 10px;
-  cursor: pointer;
-  border: none;
-  color: #fff;
-  background: #4f46e5;
-  transition: 0.3s;
-}
-button#nextBtn:hover, button#restartBtn:hover {
-  background: #4338ca;
-}
+/* --- 省略: 先ほどの明瞭UIカード風CSS --- */
+body { font-family: 'Noto Sans JP', sans-serif; background: #eaf2f8; margin:0; padding:20px; }
+h1{text-align:center; color:#222; margin-bottom:20px; font-weight:700;}
+.quiz-box{max-width:520px;margin:0 auto;background:#fff;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,0.15);padding:25px;transition:transform 0.2s;}
+.quiz-box:hover{transform:translateY(-2px);}
+#question{font-size:20px;font-weight:700;color:#222;margin-bottom:20px;}
+.choice{display:flex;flex-direction:column;align-items:center;justify-content:center;background:#f0f4ff;border:none;border-radius:12px;padding:15px;margin:10px 0;width:100%;font-size:17px;font-weight:500;cursor:pointer;position:relative;overflow:hidden;transition:all 0.3s ease;}
+.choice:hover{background:#dbe3ff;transform:translateY(-2px);}
+.choice img{max-width:80%;margin-top:8px;border-radius:8px;}
+.choice.correct::after{content:"✔";color:#16a34a;font-size:22px;position:absolute;right:16px;top:50%;transform:translateY(-50%);}
+.choice.incorrect::after{content:"✖";color:#dc2626;font-size:22px;position:absolute;right:16px;top:50%;transform:translateY(-50%);}
+#result{margin-top:18px;font-weight:600;font-size:16px;min-height:22px;}
+#progress,#score{margin-top:12px;font-size:14px;color:#555;}
+button#nextBtn,button#restartBtn{margin-top:18px;padding:12px 24px;font-size:17px;border-radius:10px;cursor:pointer;border:none;color:#fff;background:#4f46e5;transition:0.3s;}
+button#nextBtn:hover,button#restartBtn:hover{background:#4338ca;}
 </style>
 </head>
 <body>
 <h1>情報I クイズ（明瞭UIカード風）</h1>
 <div class="quiz-box">
-  <p id="question">ここに問題文を入力</p>
+  <p id="question">ロード中…</p>
   <div id="choices"></div>
   <p id="result"></p>
   <p id="progress"></p>
@@ -121,29 +36,7 @@ button#nextBtn:hover, button#restartBtn:hover {
 </div>
 
 <script>
-let quizData = [
-  {
-    "question": "ここに問題文を入力",
-    "choices": [
-      {"text": "選択肢1", "img": null},
-      {"text": "選択肢2", "img": null},
-      {"text": "選択肢3", "img": null}
-    ],
-    "answer": 0,
-    "explanation": "ここに解説を入力"
-  },
-  {
-    "question": "画像選択肢の例",
-    "choices": [
-      {"text": "", "img": "https://example.com/sample-image1.png"},
-      {"text": "", "img": "https://example.com/sample-image2.png"},
-      {"text": "文字の選択肢", "img": null}
-    ],
-    "answer": 1,
-    "explanation": "正解は2番目の画像です"
-  }
-];
-
+let quizData = [];
 let currentQuiz = 0;
 let score = 0;
 
@@ -172,7 +65,7 @@ function loadQuiz() {
   restartBtn.style.display = "none";
 
   const shuffledChoices = shuffleArray([...quiz.choices]);
-  shuffledChoices.forEach((choice) => {
+  shuffledChoices.forEach(choice => {
     const btn = document.createElement("button");
     btn.className = "choice";
     if (choice.text) btn.textContent = choice.text;
@@ -226,7 +119,19 @@ restartBtn.onclick = () => {
   loadQuiz();
 };
 
-loadQuiz();
+// 外部JSON読み込み
+fetch("quiz.json")
+  .then(response => response.json())
+  .then(data => {
+    quizData = data;
+    shuffleArray(quizData);
+    loadQuiz();
+  })
+  .catch(err => {
+    questionEl.textContent = "問題データの読み込みに失敗しました";
+    console.error(err);
+  });
+
 </script>
 </body>
 </html>
