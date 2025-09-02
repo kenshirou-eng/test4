@@ -1,0 +1,102 @@
+[
+  {
+    "question": "IPアドレスは何を識別するための番号ですか？",
+    "choices": [
+      {"text": "コンピュータやネットワーク機器", "img": null},
+      {"text": "ウェブサイトのデザイン", "img": null},
+      {"text": "プログラムのバージョン", "img": null}
+    ],
+    "answer": 0,
+    "explanation": "IPアドレスはネットワーク上の機器を識別する番号です。"
+  },
+  {
+    "question": "CPUの主な役割は？",
+    "choices": [
+      {"text": "データの演算と処理", "img": null},
+      {"text": "データの保存", "img": null},
+      {"text": "画面表示", "img": null}
+    ],
+    "answer": 0,
+    "explanation": "CPUはコンピュータの演算と処理の中心です。"
+  },
+  {
+    "question": "HTMLは何の略ですか？",
+    "choices": [
+      {"text": "HyperText Markup Language", "img": null},
+      {"text": "High Tech Machine Language", "img": null},
+      {"text": "Home Tool for Making Links", "img": null}
+    ],
+    "answer": 0,
+    "explanation": "HTMLはHyperText Markup Languageの略です。"
+  },
+  {
+    "question": "この画像に写っているのはどのコンピュータ部品？",
+    "choices": [
+      {"text": "", "img": "https://upload.wikimedia.org/wikipedia/commons/2/2f/CPU_AMD.jpg"},
+      {"text": "", "img": "https://upload.wikimedia.org/wikipedia/commons/3/3a/RAM_module.jpg"},
+      {"text": "", "img": "https://upload.wikimedia.org/wikipedia/commons/4/4c/HDD.jpg"}
+    ],
+    "answer": 0,
+    "explanation": "これはCPUです。"
+  },
+  {
+    "question": "この画像に写っているのはどの部品？",
+    "choices": [
+      {"text": "", "img": "https://upload.wikimedia.org/wikipedia/commons/3/3a/RAM_module.jpg"},
+      {"text": "", "img": "https://upload.wikimedia.org/wikipedia/commons/4/4c/HDD.jpg"},
+      {"text": "", "img": "https://upload.wikimedia.org/wikipedia/commons/2/2f/CPU_AMD.jpg"}
+    ],
+    "answer": 0,
+    "explanation": "これはRAMです。"
+  },
+  {
+    "question": "HTTPSとは何の略？",
+    "choices": [
+      {"text": "HyperText Transfer Protocol Secure", "img": null},
+      {"text": "High Tech Transfer Protocol Service", "img": null},
+      {"text": "Hyperlink Transfer Protection System", "img": null}
+    ],
+    "answer": 0,
+    "explanation": "HTTPSはHyperText Transfer Protocol Secureの略です。"
+  },
+  {
+    "question": "クラウドサービスの例はどれ？",
+    "choices": [
+      {"text": "Google Drive", "img": null},
+      {"text": "Excel（オフライン版）", "img": null},
+      {"text": "USBメモリ", "img": null}
+    ],
+    "answer": 0,
+    "explanation": "Google Driveはクラウド上でデータを管理するサービスです。"
+  },
+  {
+    "question": "この画像に写っているのは？",
+    "choices": [
+      {"text": "", "img": "https://upload.wikimedia.org/wikipedia/commons/4/4c/HDD.jpg"},
+      {"text": "", "img": "https://upload.wikimedia.org/wikipedia/commons/3/3a/RAM_module.jpg"},
+      {"text": "", "img": "https://upload.wikimedia.org/wikipedia/commons/2/2f/CPU_AMD.jpg"}
+    ],
+    "answer": 0,
+    "explanation": "これはHDD（ハードディスクドライブ）です。"
+  },
+  {
+    "question": "JavaScriptは何のための言語？",
+    "choices": [
+      {"text": "Webページに動的な動作を追加する", "img": null},
+      {"text": "データベース管理用", "img": null},
+      {"text": "OSを開発するため", "img": null}
+    ],
+    "answer": 0,
+    "explanation": "JavaScriptはWebページに動的な動作を追加するための言語です。"
+  },
+  {
+    "question": "CSSは何を設定するための言語？",
+    "choices": [
+      {"text": "Webページの見た目", "img": null},
+      {"text": "データの暗号化", "img": null},
+      {"text": "ネットワークの接続設定", "img": null}
+    ],
+    "answer": 0,
+    "explanation": "CSSはWebページの色やレイアウトなどの見た目を設定する言語です。"
+  }
+]
