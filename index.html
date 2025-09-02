@@ -3,12 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>情報I クイズ（明瞭UIカード風）</title>
+<title>共通テスト情報I クイズ</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 /* --- 省略: 先ほどの明瞭UIカード風CSS --- */
 body { font-family: 'Noto Sans JP', sans-serif; background: #eaf2f8; margin:0; padding:20px; }
-h1{text-align:center; color:#222; margin-bottom:20px; font-weight:700;}
+h1 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 26px;           /* 文字を少し小さく */
+  background: #dbe3ff;       /* タイトル背景の色 */
+  padding: 12px 0;           /* 上下に余白を追加 */
+  border-radius: 12px;       /* 角を丸く */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* 軽い影で浮き上がらせる */
+}
 .quiz-box{max-width:520px;margin:0 auto;background:#fff;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,0.15);padding:25px;transition:transform 0.2s;}
 .quiz-box:hover{transform:translateY(-2px);}
 #question{font-size:20px;font-weight:700;color:#222;margin-bottom:20px;}
@@ -24,7 +34,7 @@ button#nextBtn:hover,button#restartBtn:hover{background:#4338ca;}
 </style>
 </head>
 <body>
-<h1>情報I クイズ（明瞭UIカード風）</h1>
+<h1>共通テスト情報I クイズ</h1>
 <div class="quiz-box">
   <p id="question">ロード中…</p>
   <div id="choices"></div>
